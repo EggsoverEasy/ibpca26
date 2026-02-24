@@ -3,7 +3,12 @@ body {
 }
 
 #main {
-  text-align: center;
-  color: white;
+ background-color: white;
 }
-  
+
+#lorem {
+  text-align: center;
+  border: 5px solid black;
+
+}
+
