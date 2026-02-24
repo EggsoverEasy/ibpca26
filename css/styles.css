@@ -3,7 +3,7 @@ body {
 }
 
 #main {
- background-color: white;
+ background-color: gray;
 }
 
 #lorem {
@@ -11,4 +11,5 @@ body {
   border: 5px solid black;
 
 }
+
 
