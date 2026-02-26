@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    background-color: yellow;
+}
+
+#header{
+    display:flex;
+    background-color: rgb(138, 86, 129);
+    align-items: baseline;
+    color: white;
+    padding: 0 250px;
+}
+
+#container{
+    display:flex;
+    max-width:90%;
+    margin:auto;
+}
+
+#container p{
+  text-indent: 2em;
+}
+
+#henshin{
+    text-align: left;
+    margin-left: 50px;
+}
+
+#main{
+    flex:60%;
+    background-color: #ccc;
+    padding: 25px;
+}
+
+#side{
+    flex: 40%;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  #header{
+    display:flex;
+    background-color: rgb(138, 86, 129);
+    align-items: baseline;
+    color: white;
+    padding: 0 50px;
+   }
+
+   #container{
+    display: flex;
+    flex-direction: column;
+   }
+
+   #side {
+    display: none;
+   }
+}
