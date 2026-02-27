@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-color: yellow;
+    font-family: sans-serif;
 }
 
 #header{
@@ -14,7 +15,7 @@ body{
 #container{
     display:flex;
     max-width:90%;
-    margin:auto;
+    margin:10px auto;
 }
 
 #container p{
@@ -23,7 +24,26 @@ body{
 
 #henshin{
     text-align: left;
-    margin-left: 50px;
+    margin-left: 120px;  
+}
+
+#henshin button{
+    font-size: 20px;
+    border-radius: 0px;
+    margin: 0px 8px;
+    border: none;
+    padding: 10px 40px;
+    color: white;
+    background-color: rgb(138, 86, 129);
+    transition: 0.3s;
+}
+
+#henshin button:hover{
+    background-color: rgb(92, 48, 85);
+}
+
+#henshin button:active {
+  transform: scale(95%);
 }
 
 #main{
@@ -32,11 +52,122 @@ body{
     padding: 25px;
 }
 
+#textBody{
+    padding: 40px;
+}
+
+#textBody h1, h3{
+    margin: 0;
+}
+
+#textBody a{
+    text-decoration: none;
+    color: white;
+    background-color: #525280;
+    transition: 0.3s;
+}
+
+#textBody a:hover{
+    background-color: #1d1d36;
+}
+
+#textBody a:active{
+    scale:92%;
+}
+
+#infoGraph{
+    display:grid;
+    grid-template-columns: 25% 75%;
+    background-color: white;
+    padding: 12px;
+}
+
+#infoGraph div{
+    border: 2px white solid;
+    padding: 8px;
+    text-align: center;
+}
+
+#infoGraph div.second{
+    background-color: #525280;
+}
+
+.PHRG{
+    color:blue;
+    font-weight: bold;
+}
+
+summary{
+    text-decoration: none;
+    background-color: #525280;
+    width:80%;
+    margin:auto;
+    padding: 5px;
+}
+
+.insides{
+    background-color: white;
+   width:80%;
+   margin:auto;
+   padding: 5px;
+}
 #side{
     flex: 40%;
     background-color: black;
     padding: 10px;
     text-align: center;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(92, 48, 85);
+    color: white;
+    border-top: 5px black solid;
+    justify-content: center;
+}
+
+.footer a{
+    color:white;
+    text-decoration: none;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 1300px) {
+       
+    #henshin {
+        display:flex;
+        margin: 0px auto;
+    }
+
+   #henshin button{
+        font-size: 20px;
+        border-radius: 0px;
+        margin: 0px 30px;
+        padding: 10px 40px;
+        border: none;
+        color: white;
+        background-color: rgb(138, 86, 129);
+        transition: 0.3s;
+        }
+
+    #container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+   }
+
+   #side {
+    display: none;
+   }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -55,9 +186,37 @@ body{
    #container{
     display: flex;
     flex-direction: column;
+    margin: 10px auto;
    }
 
    #side {
     display: none;
    }
+
+   #henshin {
+    display:flex;
+    justify-content: space-around;
+    margin: 10px auto;
+   }
+
+   #henshin button{
+    font-size: 20px;
+    border-radius: 0px;
+    margin: 0px 8px;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(138, 86, 129);
+    transition: 0.3s;
+    }
+
+   #textBody{
+    padding: 3px;
+    }
+
+    #infoGraph div{
+    border: 2px white solid;
+    padding: 3px;
+    text-align: center;
+}
 }

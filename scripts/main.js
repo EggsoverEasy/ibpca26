@@ -1,19 +1,42 @@
 const btnA = document.getElementById('btnAbout');
 const btnH = document.getElementById('btnHobbies');
 const btnF = document.getElementById('btnFaves');
+const scolip = document.getElementById('scoliCry');
 
 let aboutMe =
-  '<p>Actual Dweeb that tends to be shy, kind of a dork Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente voluptates, eos deleniti, voluptatibus assumenda culpa perspiciatis dolore incidunt cumque adipisci, animi quidem quasi. Possimus tempore ducimus non optio fuga.</p>' +
-  '<p>Loves breasts, anime, video games, and taking long naps. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente voluptates, eos deleniti, voluptatibus assumenda culpa perspiciatis dolore incidunt cumque adipisci, animi quidem quasi. Possimus tempore ducimus non optio fuga.</p>';
+  '<h3>Ian Brown</h3>' +
+  '<h1>Web Developer</h1>' +
+  '<span>To be</span>' +
+  '<p>Ian is a passionate, life long learner that is eager to embark on the next great chapter of his life.</p>' +
+  '<p>Ian was born in Maryland, but moved to and grew up in Delaware from when he was five years old. He graduated from the University of Delaware in 2011 with a Bachelor of the Arts in the Fine Art program.</p>' +
+  "<p>As someone who grew up with the internet, Ian's love of programming started small and familiar for a lot of his peers- on an up and coming website called Neopets™ that let you take basic HTML to your storefront and make it yours. This would later transition to MySpace™ making profile pages for people now using CSS.</p>" +
+  '<p>As an adult, and still looking to do more, Ian went back to school and got an Associates in Computer Science at Del Tech University before ultimately landing at <span class="PHRG" title="I work here!">Power Home Remodeling Group</span> and joined their <span class="PHRG" title="This is my job!">Ninja Support Team</span> with the driving light of one day joining the PCA.</p>';
 
 let aboutHobbies =
-  '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur facilisis felis, vitae interdum neque molestie in. Pellentesque eu metus quis urna varius imperdiet in id ex. Proin id purus in quam molestie vehicula sed vitae libero. Ut ut consectetur nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Mauris sit amet arcu eget purus tempor commodo quis sit amet turpis. Aliquam eget maximus leo, accumsan bibendum tortor. Aliquam arcu mauris, pretium a facilisis sit amet, maximus eu risus. Nunc vitae efficitur est, quis viverra mauris.</p>' +
-  '<p> Pellentesque quis tristique turpis. Ut id sem imperdiet mi volutpat congue sed quis magna. Nulla lectus sem, molestie id ullamcorper at, lobortis vel mi. Duis molestie ex neque, ac lobortis leo aliquam non. Nunc viverra porttitor hendrerit. Integer tincidunt interdum erat auctor blandit. </p>';
+  '<h1>Hobbies</h1>' +
+  '<br>' +
+  '<p>These are some things I like to <span class="strikethrough">waste</span> spend time on!</p>' +
+  "<p>You can click on the name of the Hobby for a \'personal fave\' in that category</p>" +
+  '<div id="infoGraph">' +
+  '<a href=\"https://killsixbilliondemons.com/\" target="_blank"><div>Art</div></a>' +
+  '<div class=\"second\">IDK some shit about art I guess</div>' +
+  '<a href=\"https://myanimelist.net/anime/1482/DGray-man" target="_blank"><div>Anime</div></a>' +
+  '<div class=\"second\">IDK some shit about anime I guess</div>' +
+  '<a href=\"https://persona.atlus.com/p5r/?lang=en\" target="_blank"><div>Video Games</div></a>' +
+  '<div class=\"second\">IDK some shit about video games I guess</div>' +
+  '<a href=\"https://ramenkumamoto.com/\" target="_blank"><div>Food</div></a>' +
+  '<div class=\"second\">IDK some shit about food I guess</div>' +
+  '<a href=\"https://www.littlegoatcoffeeroasting.com/\" target="_blank"><div>Coffee</div></a>' +
+  '<div class=\"second\">IDK some shit about coffee I guess</div>' +
+  '<a href=\"https://www.bookbub.com/referral/c52481cba4647f48\" target="_blank"><div>Books</div></a>' +
+  '<div class=\"second\">IDK some shit about books I guess</div>' +
+  '</div>';
 
 let aboutFaves =
-  '<p>Nam tellus turpis, semper ac maximus ut, mollis at magna. Etiam dictum turpis arcu, vehicula feugiat felis luctus in. Nunc vel suscipit justo. Suspendisse commodo leo eget turpis rutrum tempus. Vivamus vehicula turpis non sapien interdum, eu pellentesque massa facilisis. Praesent at mauris et lectus semper tincidunt eget et nunc.</p>' +
-  '<p> Pellentesque dictum sed tellus vel viverra. Aenean porttitor dolor in ex tincidunt, vel porta nisi facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam quis lorem ante.</p>' +
-  '<p> Proin maximus nisi sapien, quis cursus felis hendrerit euismod. Donec vitae sem ligula. Curabitur blandit at eros quis efficitur.</p>';
+  '<details><summary>Anime</summary><p class="insides">Lorem Ipsum Blah Blah Blah</p></details>' +
+  '<details><summary>Books</summary><p class="insides">Lorem Ipsum Blah Blah Blah</p></details>' +
+  '<details><summary>Video Games</summary><p class="insides">Lorem Ipsum Blah Blah Blah</p></details>' +
+  '<details><summary>Music</summary><p class="insides">Lorem Ipsum Blah Blah Blah</p></details>';
 
 btnA.addEventListener('click', function () {
   document.getElementById('textBody').innerHTML = aboutMe;
@@ -26,3 +49,24 @@ btnH.addEventListener('click', function () {
 btnF.addEventListener('click', function () {
   document.getElementById('textBody').innerHTML = aboutFaves;
 });
+
+scolip.addEventListener('click', function () {
+  var audio = document.getElementById('audioPlay');
+  audio.load();
+  audio.play();
+});
+
+var coll = document.getElementsByClassName('collapsible');
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener('click', function () {
+    this.classList.toggle('active');
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  });
+}
