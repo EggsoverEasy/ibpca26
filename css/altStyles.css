@@ -50,6 +50,7 @@ body{
     flex:60%;
     background-color: #ccc;
     padding: 25px;
+    overflow: auto;
 }
 
 #textBody{
@@ -161,7 +162,7 @@ summary{
 
     #container{
     display: flex;
-    margin: 10px auto;
+    margin: 10px auto 50px;
    }
 
 }
@@ -190,7 +191,6 @@ summary{
    #container{
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
    }
 
    #side {
@@ -200,7 +200,6 @@ summary{
    #henshin {
     display:flex;
     justify-content: space-around;
-    margin: 10px auto;
    }
 
    #henshin button{
